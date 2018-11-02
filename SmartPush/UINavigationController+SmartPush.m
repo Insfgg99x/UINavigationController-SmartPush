@@ -28,14 +28,8 @@
             [self lc_pushViewController:viewController animated:animated];
             return;
         }
-        if (controllers.count == 1) {
-            current.hidesBottomBarWhenPushed=YES;
-            [self lc_pushViewController:viewController animated:animated];
-            current.hidesBottomBarWhenPushed = NO;
-        } else {
-            current.hidesBottomBarWhenPushed = YES;
-            [self lc_pushViewController:viewController animated:animated];
-        }
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self lc_pushViewController:viewController animated:animated];
     } else {
         [self lc_pushViewController:viewController animated:animated];
     }
