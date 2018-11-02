@@ -27,7 +27,7 @@ SomeViewController *some = [SomeViewController new];
 
 ```
 pod repo update
-pod 'SmartPush'
+pod 'SmartPush', '~> 1.1'
 ```
 - 或者手动添加SmartPush文件夹至项目
 
