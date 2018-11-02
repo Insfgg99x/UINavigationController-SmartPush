@@ -6,7 +6,7 @@ s.summary      = "UINavigationController push到下一界面时自动隐藏底�
 s.homepage     = "https://github.com/Insfgg99x/UINavigationController-SmartPush"
 s.license      = "MIT"
 s.authors      = { "CGPointZero" => "newbox0512@yahoo.com" }
-s.source       = { :git => "https://github.com/Insfgg99x/UINavigationController-SmartPush.git", :tag => "2.0"}
+s.source       = { :git => "https://github.com/Insfgg99x/UINavigationController-SmartPush.git", :tag => "1.1"}
 s.ios.deployment_target = '7.0'
 s.source_files = 'SmartPush/*.{h,m}'
 s.requires_arc = true
