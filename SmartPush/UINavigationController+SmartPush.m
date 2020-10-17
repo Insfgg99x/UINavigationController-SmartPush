@@ -17,6 +17,10 @@
         Method m1=class_getInstanceMethod([self class], @selector(pushViewController:animated:));
         Method m2=class_getInstanceMethod(self, @selector(lc_pushViewController:animated:));
         method_exchangeImplementations(m1, m2);
+        
+        Method m3=class_getInstanceMethod([self class], @selector(popToRootViewControllerAnimated:));
+        Method m4=class_getInstanceMethod(self, @selector(yx_popToRootViewControllerAnimated:));
+        method_exchangeImplementations(m3, m4);
     });
 }
 //automatic hide tabbar when pushed
@@ -33,6 +37,11 @@
     } else {
         [self lc_pushViewController:viewController animated:animated];
     }
+}
+
+- (NSArray<__kindof UIViewController *> *)yx_popToRootViewControllerAnimated:(BOOL)animated {
+    self.tabBarController.tabBar.hidden = NO;
+    return [self yx_popToRootViewControllerAnimated:animated];
 }
 
 @end
